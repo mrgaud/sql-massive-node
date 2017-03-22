@@ -1,0 +1,28 @@
+<head>
+
+</head>
+
+<body ng-app='myApp'>
+    <div ng-controller='mainCtrl'>
+        <div ng-repeat='product in products'>
+            <h2>{{product.name}}, {{product.description}}, {{product.price}}</h2>
+        </div>
+    </br>
+        <form>
+            <h3>product adder</h3>
+            <label for="name">Name:</label>
+            <input type="text" name="name" value="" placeholder="name" ng-model='name'></br>
+            <label for="description">description:</label>
+            <input type="text" name="description" value="" placeholder="description" ng-model='desc'></br>
+            <label for="price">price:</label>
+            <input type="number" name="price" value="" placeholder="price" ng-model='price'></br>
+            <label for="imgurl">image url:</label>
+            <input type="text" name="imgurl" value="" placeholder="Http://somePhotosite.com" ng-model='imgurl'></br>
+            <button type="button" name="button" ng-click='addProduct(name,desc,price,imgurl)'>submit</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="mainCtrl.js" charset="utf-8"></script>
+    <script src="mainSrvc.js" charset="utf-8"></script>
+</body>
